@@ -1,0 +1,44 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    z-index: 1000;
+}
+
+/* Trailer Button Styling */
+.btn-trailer {
+    background-color: #f8c12e; /* Goldish color */
+    color: white;
+    font-size: 22px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation on Hover */
+.btn-trailer:hover {
+    background-color: #f8a600; /* Darker gold on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Pause Icon Styling */
+.btn-trailer i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/* Media Queries for Responsive Button */
+@media (max-width: 768px) {
+    .btn-trailer {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+}
+

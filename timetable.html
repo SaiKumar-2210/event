@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortus 25 - Timetable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Add animation for events */
+        .navbar {
+            background-color: #f1a41f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .event-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .event-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .event-time {
+            font-weight: bold;
+            color: #f1a41f;
+        }
+
+        .event-title {
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        .event-description {
+            color: #666;
+        }
+
+        .day-heading {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Ortus 25</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="timetable.html">Timetable</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photobooth.html">Photo Booth</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="foodstalls.html">Food Stalls</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Timetable Section -->
+    <section class="container mt-5 pt-5">
+        <h1 class="text-center mb-4">Ortus 25 - Timetable</h1>
+
+        <!-- Day 1 -->
+        <div class="day-heading">Day 1</div>
+        <div class="row">
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">10:00 AM</div>
+                <div class="event-title">Opening Ceremony</div>
+                <div class="event-description">The grand opening ceremony of Ortus 25. Be there to kick off the fest!</div>
+            </div>
+
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">11:00 AM</div>
+                <div class="event-title">Dance Performance</div>
+                <div class="event-description">Watch some amazing dance performances by talented students.</div>
+            </div>
+
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">01:00 PM</div>
+                <div class="event-title">Cultural Activities</div>
+                <div class="event-description">Get ready for some interactive cultural activities for all!</div>
+            </div>
+
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">03:00 PM</div>
+                <div class="event-title">Music Concert</div>
+                <div class="event-description">Enjoy the live music concert by local bands and artists.</div>
+            </div>
+
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">05:00 PM</div>
+                <div class="event-title">Prize Distribution</div>
+                <div class="event-description">Celebrate the winners of the various events during Ortus 25.</div>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-heading">Day 2</div>
+        <div class="row">
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">10:00 AM</div>
+                <div class="event-title">Workshops</div>
+                <div class="event-description">Engage in hands-on workshops on various topics.</div>
+            </div>
+
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">12:00 PM</div>
+                <div class="event-title">Sports Activities</div>
+                <div class="event-description">Participate in fun and exciting sports competitions.</div>
+            </div>
+
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">02:00 PM</div>
+                <div class="event-title">Group Discussions</div>
+                <div class="event-description">Join group discussions on various engaging topics.</div>
+            </div>
+
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">04:00 PM</div>
+                <div class="event-title">Fashion Show</div>
+                <div class="event-description">Witness a spectacular fashion show by talented students.</div>
+            </div>
+
+            <div class="col-md-6 mb-4 event-item">
+                <div class="event-time">06:00 PM</div>
+                <div class="event-title">Closing Ceremony</div>
+                <div class="event-description">Join us for the closing ceremony of Ortus 25.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to animate events when they appear in view
+        window.addEventListener('DOMContentLoaded', function () {
+            const events = document.querySelectorAll('.event-item');
+
+            window.addEventListener('scroll', function () {
+                events.forEach(event => {
+                    const eventPosition = event.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.5;
+
+                    if (eventPosition < screenPosition) {
+                        event.classList.add('show');
+                    }
+                });
+            });
+
+            // Trigger scroll event to check on page load
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+
+</html>

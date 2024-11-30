@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Ortus 25</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: #f1a41f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .navbar a.active {
+            background-color: #333;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .navbar-toggler {
+            background-color: #333;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 50px 0;
+            background-image: url('your-event-background-image.jpg'); /* Replace with your event image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .main-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        /* Button Styling */
+        .btn-play {
+            background-color: #f1a41f;
+            color: white;
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .btn-play:hover {
+            background-color: #333;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Ortus 25</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="timetable.html">Timetable</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="photobooth.html">Photo Booth</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="foodstalls.html">Food Stalls</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Main Content Section -->
+<div class="main-content">
+    <h1>Welcome to Ortus 25</h1>
+    <p>Get ready for an exciting two days filled with activities, performances, and more!</p>
+    <!-- Play Button for Trailer -->
+    <button class="btn-play" id="playButton">▶ Play Trailer</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Trailer Modal (Optional) -->
+<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        alert('Trailer is playing now!');  // You can replace this with a modal or video player
+    });
+</script>
+</body>
+</html>
