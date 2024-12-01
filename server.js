@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const port = 3000;
-
 // Middleware to parse POST request bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -16,16 +15,22 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
   });
   
-  app.get('/', (req, res) => {
+  app.get('/timetable.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'timetable.html'));
   });
   
-  app.get('/photobooth', (req, res) => {
+  app.get('/photobooth.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'photobooth.html'));
   });
   
-  app.get('/registration', (req, res) => {
+  app.get('/registration.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'registration.html'));
+  });
+  app.get('/index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+  });
+  app.get('/foodstalls.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'foodstalls.html'));
   });
   
 
